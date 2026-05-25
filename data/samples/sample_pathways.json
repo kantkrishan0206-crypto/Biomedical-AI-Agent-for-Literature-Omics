@@ -1,0 +1,20 @@
+[
+  {
+    "id": "REACTOME_SPLICING",
+    "name": "mRNA Splicing",
+    "genes": [
+      "SMN1",
+      "SMN2"
+    ],
+    "score": 0.91
+  },
+  {
+    "id": "GO_MOTOR_NEURON",
+    "name": "Motor neuron differentiation",
+    "genes": [
+      "CHAT",
+      "ISL1"
+    ],
+    "score": 0.84
+  }
+]

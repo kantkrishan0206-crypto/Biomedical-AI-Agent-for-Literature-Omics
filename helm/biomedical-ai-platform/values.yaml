@@ -1,0 +1,5 @@
+ownerEmail: kantkrishan0206@gmail.com
+frontend:
+  image: biomedical-ai-frontend:latest
+backend:
+  image: biomedical-ai-backend:latest

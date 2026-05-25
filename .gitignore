@@ -1,0 +1,39 @@
+# env and secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+!deployment/env/*.example
+!deployment/vercel/env.example
+!backend/.env.example
+
+# dependencies and builds
+node_modules/
+.next/
+dist/
+build/
+.turbo/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+
+# data and generated artifacts
+data/raw/*
+data/processed/*
+data/cache/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/cache/.gitkeep
+results/**/predictions.jsonl
+results/**/raw/
+optional/scratch/
+
+# local state
+*.log
+*.sqlite
+*.db
+.DS_Store
+Thumbs.db

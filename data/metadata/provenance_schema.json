@@ -1,0 +1,18 @@
+{
+  "required": [
+    "provenance_id",
+    "sha256",
+    "source",
+    "license",
+    "created_at",
+    "processing_version"
+  ],
+  "properties": {
+    "provenance_id": "string",
+    "sha256": "string",
+    "source": "string",
+    "license": "string",
+    "access_scope": "workspace|project|private",
+    "processing_version": "string"
+  }
+}

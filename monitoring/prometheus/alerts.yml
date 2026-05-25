@@ -1,0 +1,8 @@
+groups:
+  - name: biomedical-ai
+    rules:
+      - alert: BackendDown
+        expr: up{job="biomedical-backend"} == 0
+        for: 2m
+        labels: { severity: critical }
+        annotations: { summary: "Biomedical backend is down" }

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: biomedical-ai
+data:
+  APP_OWNER_EMAIL: kantkrishan0206@gmail.com

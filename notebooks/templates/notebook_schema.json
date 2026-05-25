@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "title",
+    "cells",
+    "provenance"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "cells": {
+      "type": "array"
+    },
+    "provenance": {
+      "type": "object"
+    }
+  }
+}

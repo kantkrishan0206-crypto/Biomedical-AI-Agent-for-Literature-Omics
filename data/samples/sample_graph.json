@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": "gene:SMN2",
+      "label": "SMN2",
+      "type": "gene"
+    },
+    {
+      "id": "disease:SMA",
+      "label": "Spinal muscular atrophy",
+      "type": "disease"
+    },
+    {
+      "id": "drug:OCX-101",
+      "label": "OCX-101",
+      "type": "drug"
+    }
+  ],
+  "edges": [
+    {
+      "source": "gene:SMN2",
+      "target": "disease:SMA",
+      "relation": "modifies_risk",
+      "evidence": "34205212"
+    },
+    {
+      "source": "drug:OCX-101",
+      "target": "gene:SMN2",
+      "relation": "modulates_splicing",
+      "evidence": "31358202"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+seed: 42
+temperature: 0.2
+top_p: 0.9
+top_k: 40
+chunking_strategy: semantic_v1
+workflow_dag_version: scientific_dag_v1
+prompt_version: promptset_2026_05

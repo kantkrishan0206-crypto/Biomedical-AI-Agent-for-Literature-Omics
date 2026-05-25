@@ -1,0 +1,11 @@
+name: Dependency Update
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 1"
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Review dependency updates for Node, Python, Docker, and workflow images."

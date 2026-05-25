@@ -1,0 +1,69 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: biomed
+      POSTGRES_PASSWORD: biomed
+      POSTGRES_DB: biomedical_ai
+    ports: ["5432:5432"]
+    volumes: ["postgres_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U biomed -d biomedical_ai"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+
+  qdrant:
+    image: qdrant/qdrant:v1.11.0
+    ports: ["6333:6333", "6334:6334"]
+    volumes: ["qdrant_data:/qdrant/storage"]
+
+  backend:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.backend
+    env_file: .env.local.example
+    environment:
+      DATABASE_URL: postgresql+asyncpg://biomed:biomed@postgres:5432/biomedical_ai
+      REDIS_URL: redis://redis:6379/0
+      QDRANT_URL: http://qdrant:6333
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+    ports: ["8000:8000"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      qdrant:
+        condition: service_started
+
+  worker:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.worker
+    env_file: .env.local.example
+    environment:
+      DATABASE_URL: postgresql+asyncpg://biomed:biomed@postgres:5432/biomedical_ai
+      REDIS_URL: redis://redis:6379/0
+      QDRANT_URL: http://qdrant:6333
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+    depends_on: [backend, redis, qdrant]
+
+  frontend:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile.frontend
+    environment:
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+      API_BASE_URL: http://backend:8000
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000
+    ports: ["3000:3000"]
+    depends_on: [backend]
+
+volumes:
+  postgres_data:
+  qdrant_data:

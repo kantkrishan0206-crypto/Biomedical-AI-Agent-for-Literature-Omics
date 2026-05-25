@@ -1,0 +1,15 @@
+{
+  "title": "overview",
+  "schemaVersion": 39,
+  "panels": [
+    {
+      "title": "System health",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "biomed_http_requests_total"
+        }
+      ]
+    }
+  ]
+}

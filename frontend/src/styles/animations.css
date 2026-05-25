@@ -1,0 +1,2 @@
+.pulse-live { animation: pulseLive 1.5s infinite; }
+@keyframes pulseLive { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }

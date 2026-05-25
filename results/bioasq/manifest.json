@@ -1,0 +1,6 @@
+{
+  "seed": 42,
+  "model": "ollama:llama3.1",
+  "dataset_version": "bioasq:local-fixture",
+  "git_commit": "recorded-at-runtime"
+}

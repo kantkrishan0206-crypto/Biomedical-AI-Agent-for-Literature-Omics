@@ -1,0 +1,29 @@
+{
+  "owner": "kantkrishan0206@gmail.com",
+  "sources": [
+    {
+      "name": "PubMed",
+      "kind": "abstract_metadata",
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+      "allowed": true
+    },
+    {
+      "name": "GEO",
+      "kind": "metadata",
+      "endpoint": "https://www.ncbi.nlm.nih.gov/geo",
+      "allowed": true
+    },
+    {
+      "name": "SRA",
+      "kind": "metadata",
+      "endpoint": "https://www.ncbi.nlm.nih.gov/sra",
+      "allowed": true
+    },
+    {
+      "name": "UniProt",
+      "kind": "protein_annotations",
+      "endpoint": "https://rest.uniprot.org",
+      "allowed": true
+    }
+  ]
+}

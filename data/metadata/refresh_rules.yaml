@@ -1,0 +1,13 @@
+sources:
+  pubmed:
+    frequency: weekly
+    legal_scope: abstracts_and_metadata
+  geo:
+    frequency: monthly
+    legal_scope: public_metadata
+  sra:
+    frequency: monthly
+    legal_scope: public_metadata
+  uniprot:
+    frequency: monthly
+    legal_scope: open_annotations

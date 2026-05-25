@@ -1,0 +1,18 @@
+[
+  {
+    "pmid": "34205212",
+    "title": "SMN2 splicing modulation rescues motor neuron defects in spinal muscular atrophy models",
+    "journal": "Nature Medicine",
+    "year": 2021,
+    "abstract": "Small molecules that promote SMN2 exon 7 inclusion increase full-length SMN protein and improve survival in SMA model systems.",
+    "license": "PubMed metadata and abstract sample for local testing"
+  },
+  {
+    "pmid": "31358202",
+    "title": "CRISPR activation of SMN2 as a potential therapeutic strategy for SMA",
+    "journal": "Science Translational Medicine",
+    "year": 2020,
+    "abstract": "CRISPRa-mediated upregulation of SMN2 expression supports motor neuron function in preclinical experiments.",
+    "license": "PubMed metadata and abstract sample for local testing"
+  }
+]

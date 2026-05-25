@@ -1,0 +1,12 @@
+name: Security Scan
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  pull_request:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: grep -R "sk-[A-Za-z0-9]" -n . --exclude-dir=.git --exclude-dir=node_modules || true
+      - run: pip install pip-audit && pip-audit -r requirements.txt || true

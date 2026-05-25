@@ -1,0 +1,5 @@
+cell_id,cluster,cell_type,sample,batch
+cell_001,0,MN_alpha,SMA_A,1
+cell_002,1,MN_gamma,SMA_A,1
+cell_003,2,Interneurons,Control_B,2
+cell_004,3,Astrocytes,Control_B,2

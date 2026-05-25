@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: biomedical-ai-backend
+    env: docker
+    dockerfilePath: deployment/docker/Dockerfile.backend
+    healthCheckPath: /api/v1/health/ready
+    envVars:
+      - key: APP_OWNER_EMAIL
+        value: kantkrishan0206@gmail.com
+      - key: DATABASE_URL
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: OLLAMA_BASE_URL
+        sync: false
+  - type: worker
+    name: biomedical-ai-worker
+    env: docker
+    dockerfilePath: deployment/docker/Dockerfile.worker
+    envVars:
+      - key: REDIS_URL
+        sync: false

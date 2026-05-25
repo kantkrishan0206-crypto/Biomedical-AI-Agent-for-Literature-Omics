@@ -1,0 +1,11 @@
+{
+  "FastAPI router": {
+    "prefix": "bio-router",
+    "body": [
+      "from fastapi import APIRouter",
+      "",
+      "router = APIRouter(prefix=\"/${1:resource}\", tags=[\"${1:resource}\"])",
+      ""
+    ]
+  }
+}

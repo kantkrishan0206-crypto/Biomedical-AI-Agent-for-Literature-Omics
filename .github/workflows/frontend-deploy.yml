@@ -1,0 +1,12 @@
+name: Vercel Frontend
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["frontend/**", "deployment/vercel/**"]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Deploy frontend to Vercel using project secrets VERCEL_TOKEN and VERCEL_ORG_ID."

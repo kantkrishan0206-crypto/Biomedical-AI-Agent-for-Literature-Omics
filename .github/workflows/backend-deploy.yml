@@ -1,0 +1,12 @@
+name: Render Backend
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["backend/**", "deployment/render/**"]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Trigger Render deploy hook from RENDER_DEPLOY_HOOK_URL."

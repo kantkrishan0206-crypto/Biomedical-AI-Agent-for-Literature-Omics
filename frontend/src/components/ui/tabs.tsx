@@ -1,0 +1,1 @@
+export function Tabs({ tabs }: { tabs: string[] }) { return <div className="flex gap-4 border-b border-line text-sm">{tabs.map((t,i)=><span key={t} className={i===0?"border-b-2 border-cyan pb-2 text-cyan":"pb-2 text-slate-400"}>{t}</span>)}</div>; }

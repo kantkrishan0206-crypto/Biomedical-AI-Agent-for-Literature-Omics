@@ -1,0 +1,5 @@
+policy:
+  copyrighted_full_text: disallowed_without_explicit_license
+  public_abstracts: allowed_with_source_attribution
+  user_uploads: allowed_with_user_responsibility
+  clinical_or_phi_data: blocked_unless_governance_reviewed

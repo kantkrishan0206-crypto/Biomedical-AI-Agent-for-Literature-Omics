@@ -1,0 +1,8 @@
+{
+  "name": "Biomedical AI Agent",
+  "short_name": "BioAI",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#071017",
+  "background_color": "#071017"
+}

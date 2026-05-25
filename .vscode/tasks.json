@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev Stack",
+      "type": "shell",
+      "command": "docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Backend Tests",
+      "type": "shell",
+      "command": "pytest backend/tests tests/backend",
+      "problemMatcher": []
+    },
+    {
+      "label": "Frontend Dev",
+      "type": "shell",
+      "command": "pnpm --dir frontend dev",
+      "problemMatcher": []
+    }
+  ]
+}
